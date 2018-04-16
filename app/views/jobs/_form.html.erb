@@ -1,14 +1,26 @@
 <%= form_for @job do |f| %>
-  <div>
+  <div class="form-elem">
     <%= f.label :title %><br/>
     <%= f.text_field :title %>
   </div>
-  <div>
+  <div class="form-elem">
     <%= f.label :description %><br/>
     <%= f.text_area :description, size: '60x6' %>
   </div>
-  <div>
+  <div class="form-elem">
     <%= f.submit %>
     <button><%= link_to "Back", jobs_path %></button>
   </div>
+
+<% end %>
+
+<% if @job.errors.any? %>
+    <div class="error_explanation">
+      <%= pluralize(@job.errors.count, "error") %> kept this article from being saved:      
+      <ul> 
+        <% @job.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
 <% end %>

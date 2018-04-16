@@ -68,15 +68,31 @@ body {
 .edit_job, .new_job {
 	font-size: 0.9em;
 
-	div {
-		margin: 10px;
-	}
-
 	label {
 		font-weight: bold;
 	}
 
 	input, textarea {
 		margin-top: 5px;
+	}
+}
+
+.form-elem {
+	margin: 10px;
+}
+
+.field_with_errors {
+	font-style: italic;
+  	color: red;
+  	display: inline;
+}
+
+.error_explanation {
+	margin: 10px 10px 0px 10px;
+	font-style: italic;
+	font-weight: normal;
+	color: red;
+	ul {
+		margin-top: 2px;
 	}
 }
