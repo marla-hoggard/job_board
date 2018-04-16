@@ -1,3 +1,3 @@
 class Job < ApplicationRecord
-	validates :title, presence: true
+	validates :title, presence: { message: "cannot be blank." }
 end

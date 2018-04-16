@@ -1,7 +1,11 @@
 <%= form_for @job do |f| %>
   <div class="form-elem">
-    <%= f.label :title %><br/>
-    <%= f.text_field :title %>
+    <span class="required-label">*</span>
+    <%= f.label :title %>
+    <br/><%= f.text_field :title %>
+    <% if @job.errors[:title].any? %>
+        <span class="field-error-message">&nbsp;required</span>
+    <% end %>
   </div>
   <div class="form-elem">
     <%= f.label :description %><br/>
