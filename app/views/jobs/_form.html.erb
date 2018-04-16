@@ -1,5 +1,5 @@
 <%= form_for @job do |f| %>
-  <div class="form-elem">
+  <div>
     <span class="required-label">*</span>
     <%= f.label :title %>
     <br/><%= f.text_field :title %>
@@ -7,11 +7,11 @@
         <span class="field-error-message">&nbsp;required</span>
     <% end %>
   </div>
-  <div class="form-elem">
+  <div>
     <%= f.label :description %><br/>
     <%= f.text_area :description, size: '60x6' %>
   </div>
-  <div class="form-elem">
+  <div>
     <%= f.submit %>
     <button><%= link_to "Back", jobs_path %></button>
   </div>
